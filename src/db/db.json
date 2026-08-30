@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "name": "Ring",
+      "price": "2000",
+      "quantity": "5",
+      "category": "clothe",
+      "status": "active",
+      "id": "7Xgjj8oHPZ8"
+    },
+    {
+      "name": "Shoes",
+      "price": "3000",
+      "quantity": "2",
+      "category": "clothe",
+      "status": "inactive",
+      "id": "OKtpYdgfQFA"
+    },
+    {
+      "name": "table",
+      "price": "2000",
+      "quantity": "0",
+      "category": "furnitur",
+      "status": "inactive",
+      "id": "2WtgAbnSErY"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

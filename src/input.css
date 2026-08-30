@@ -1,0 +1,239 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+.effect {
+    background: #E0E4E7;
+    box-shadow: 4px 4px 10px #b8c7dd, -4px -4px 10px #ffffff;
+}
+
+.dark .darkEffect {
+    background: #141414;
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+    color: white;
+}
+
+.dark .dark-box-effect {
+    background: #141414;
+    color: white;
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+}
+
+.dark .dark-dashboardBox-effect {
+    background: #141414;
+    color: rgb(255, 0, 0);
+    box-shadow: -3px 0px 0px rgb(36, 156, 0);
+
+}
+
+.dark .btn-effect {
+    box-shadow: 0 0 4px rgba(255, 255, 255, 0.2);
+    background: transparent;
+}
+
+.effect-inner {
+    background: #E0E4E7;
+    box-shadow: inset 4px 3px 3px 0px #b8c7dd, inset -2px -4px 4px 0px #fff;
+}
+
+.focus:focus {
+    box-shadow: 0 0 5px #afbdd2;
+}
+
+input[type=text]:focus {
+    outline: none;
+}
+
+input[type=checkbox]:checked~.switch-indicator {
+    transform: translateX(85%);
+    box-shadow: 4px 4px 8px #b8c7dd, -4px -4px 8px transparent;
+}
+
+input[type=checkbox]:checked~.switch-bg {
+    background: #fe7818;
+    box-shadow: 4px 3px 3px 0px #e76000 inset;
+}
+
+.switch {
+    position: relative;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.switch-bg {
+    overflow: visible;
+    height: 16px;
+    width: 45px;
+    border-radius: 15px;
+    background: #E0E4E7;
+    box-shadow: inset 7px 2px 2px 0px #c2cad5, inset -3px -2px 2px 0px #f7f7f7;
+}
+
+.switch-indicator {
+    position: absolute;
+    top: -5px;
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background: #E0E4E7;
+    box-shadow: 4px 4px 8px #b8c7dd, -4px -4px 8px #ffffff;
+}
+
+.dark .dark-switch-bg {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+.dark .dark-switch-indicator {
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+}
+
+.dark input[type=checkbox]:checked~.switch-indicator {
+    box-shadow: 4px 4px 5px #00000082, -4px -4px 8px transparent;
+}
+
+input[type=radio] {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    appearance: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &:checked {
+        border-radius: 50%;
+        background: #E0E4E7;
+        box-shadow: 4px 4px 8px #b8c7dd, -4px -4px 8px #ffffff;
+
+        &::before {
+            content: "";
+            border-radius: 50%;
+            width: 10px;
+            height: 10px;
+            background: #ff6f00;
+        }
+    }
+}
+
+.dark input[type=radio] {
+    &:checked {
+        background: #141414;
+        box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+
+    }
+}
+
+.liStyle {
+    position: relative;
+    width: 100%;
+    height: 44px;
+    padding-left: 16px;
+    border-radius: 25px 0 0 25px;
+    display: flex;
+    place-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.style {
+    background-color: #e0e4e7;
+    color: rgb(3, 0, 48);
+
+    .iconStyle {
+        color: rgb(3, 0, 48);
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 44px;
+        right: 0px;
+        width: 44px;
+        height: 44px;
+        border-radius: 15px;
+        box-shadow: 15px -15px #e0e4e7;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: -44px;
+        right: 0px;
+        width: 44px;
+        height: 44px;
+        border-radius: 15px;
+        box-shadow: 15px 15px #e0e4e7;
+    }
+}
+
+.dark .dark-liStyle {
+    background-color: #222222;
+    color: white;
+
+    .iconStyle {
+        color: white;
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 44px;
+        right: 0px;
+        width: 44px;
+        height: 44px;
+        border-radius: 15px;
+        box-shadow: 15px -15px #222222;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: -44px;
+        right: 0px;
+        width: 44px;
+        height: 44px;
+        border-radius: 15px;
+        box-shadow: 15px 15px #222222;
+    }
+}
+
+
+.tableStyle {
+    width: 100%;
+    box-shadow: 5px 5px 13px #b8c7dd, -5px -5px 13px #ffffff;
+    background: #e0e4e7;
+    border-radius: 10px;
+    font-size: 15px;
+    padding: 1.4rem;
+    text-align: center;
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+
+    tr th {
+        padding: 8px 0;
+    }
+
+    tr td {
+        padding: 6px 0;
+    }
+
+    td,
+    th {
+        border: 1px solid black;
+    }
+}
+
+.dark .dark-tableStyle {
+    box-shadow: 0 0 5px rgba(255, 255, 255, 0.4);
+    background: #141414;
+    color: white;
+
+    td,
+    th {
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+}
